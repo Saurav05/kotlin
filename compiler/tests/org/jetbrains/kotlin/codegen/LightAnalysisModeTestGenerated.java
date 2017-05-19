@@ -896,6 +896,24 @@ public class LightAnalysisModeTestGenerated extends AbstractLightAnalysisModeTes
             KotlinTestUtils.assertAllTestsPresentByMetadata(this.getClass(), new File("compiler/testData/codegen/box/boxingOptimization"), Pattern.compile("^(.+)\\.kt$"), TargetBackend.JVM, true);
         }
 
+        @TestMetadata("boxedIntegersCmp.kt")
+        public void testBoxedIntegersCmp() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/codegen/box/boxingOptimization/boxedIntegersCmp.kt");
+            doTest(fileName);
+        }
+
+        @TestMetadata("boxedPrimitivesAreEqual.kt")
+        public void testBoxedPrimitivesAreEqual() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/codegen/box/boxingOptimization/boxedPrimitivesAreEqual.kt");
+            doTest(fileName);
+        }
+
+        @TestMetadata("boxedRealsCmp.kt")
+        public void testBoxedRealsCmp() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/codegen/box/boxingOptimization/boxedRealsCmp.kt");
+            doTest(fileName);
+        }
+
         @TestMetadata("casts.kt")
         public void testCasts() throws Exception {
             String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/codegen/box/boxingOptimization/casts.kt");
@@ -959,6 +977,12 @@ public class LightAnalysisModeTestGenerated extends AbstractLightAnalysisModeTes
         @TestMetadata("kt6842.kt")
         public void testKt6842() throws Exception {
             String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/codegen/box/boxingOptimization/kt6842.kt");
+            doTest(fileName);
+        }
+
+        @TestMetadata("maxMinBy.kt")
+        public void testMaxMinBy() throws Exception {
+            String fileName = KotlinTestUtils.navigationMetadata("compiler/testData/codegen/box/boxingOptimization/maxMinBy.kt");
             doTest(fileName);
         }
 
